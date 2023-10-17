@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN SYSTEM</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/font/fontawesome-free-6.4.2-web/css/all.min.css">
+</head>
+<body class="home">
+    <form action="inc/signup.inc.php" method="POST" class="form__regist" id="form">
+        <header class="form__header">LOGIN</header>
+        <div class="form__input">
+            <label for="input__names" class="form__text">Họ và Tên</label>
+            <input type="text" name="user_name" rules="repuired" id="input__names" class="form__control" placeholder="VD: Nguyễn Văn A">
+            <span class="text__error"></span>
+        </div>
+        <div class="form__input">
+            <label for="input__name" class="form__text">Tên đăng nhập</label>
+            <input type="text" name="user_uid" rules="repuired" id="input__name" class="form__control" placeholder="VD: Long">
+            <span class="text__error"></span>
+        </div>
+        <div class="form__input">
+            <label for="input__email" class="form__text">Email</label>
+            <input type="email" name="user_email" rules="repuired|email" id="input__email" class="form__control" placeholder="VD: long@gmail.com">
+            <span class="text__error"></span>
+        </div>
+        <div class="form__input">
+            <label for="input__password" class="form__text">Mật khẩu</label>
+            <input type="password" name="user_pwd" rules="repuired|min:6" id="input__password" class="form__control" placeholder="Mật khẩu">
+            <span class="text__error"></span>
+        </div>
+        <div class="form__btn">
+            <button type="submit" name="submit" id="input__submit"> Đăng kí</button>
+        </div>
+        <script src="app.js/validator2.js"></script>
+        <script>
+            Validator('#form'), {
+                onSubmit: function (data) {
+                    // console.log(data)
+                }
+            }
+        </script>
+</body>
+</html>
